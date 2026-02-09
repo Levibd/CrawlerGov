@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+}
+
+group = 'com.Dantas'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+}
+
+test {
+    useJUnitPlatform()
+}
